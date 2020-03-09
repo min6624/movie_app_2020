@@ -1,20 +1,39 @@
 import React from 'react';
 
-function Food({ fav }){
-  return <h1>I LIKE {fav}</h1>
+function Food({ name }){
+  return <h1>I LIKE {name}</h1>
 }
+
+const foodILike = [
+  {
+    name : "A" , image : "https://github.com/min6624/movie_app_2020"
+  },
+  {
+    name : "B" , image : "https://github.com/min6624/movie_app_2020"  
+  },
+  {
+    name : "C" , image : "https://github.com/min6624/movie_app_2020"
+  }
+
+];
+
+function renderFood(dish){
+  console.log(dish)
+  return <Food name={dish.name} picture ={dish.image} />
+
+}
+
 function App() {
   return (
     <div>
       <h1>hello</h1>      
-      <Food fav="kimchi"/>
-      <Food fav="ramen"/>
-      <Food fav="samgiopsal"/>
-      <Food fav="chukumi"/>
+      {foodILike.map(renderFood)}
+      {/* {foodILike.map(dish => <Food name={dish.name} />)} */}
+      
     </div>
   )
 }
-
+ 
 export default App;
 
 
@@ -41,4 +60,18 @@ jsx + props :: 모두 재사용 가능하다.
  props란 이렇게 뭐든지 component에 넣게 되는 것들이다.
 
  props는 어디로가는가 ? arguement로 간다. food의 첫번째 argument, 
+*/
+
+/*
+JAVASCRIPT 에서 MAP은 RENDERING이다.
+MAP은 ARRAY의 각 ITEM에서 FUNCTION을 실행하는 ARRAY를 가지는 AJVASCRIPT FUNCTION 이며 그 FUNCTION의 RESULT 를 갖는 ARRAY를 준다.
+따라서 MAP은 ARRAY를 취하고 우리가 정확히 원하는 ARRAY를 반환한다.
+*/
+
+/*
+MAP FUNCTION :: ARRAY 의 각  ITME 에 FUNCTION을 적용하고 ARRAY를 준다.about
+
+map은 각각 item 별로 function을 호출한다.
+map은 여기서 뭐가 들어오던 array로 돌려준다.
+
 */
