@@ -6,7 +6,7 @@ function Food({ name }){
 
 const foodILike = [
   {
-    name : "A" , image : "https://github.com/min6624/movie_app_2020"
+    name : "A" , image : "https://github.com/min6624/movie_app_2020s"
   },
   {
     name : "B" , image : "https://github.com/min6624/movie_app_2020"  
