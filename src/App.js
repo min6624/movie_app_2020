@@ -1,12 +1,12 @@
 import React from 'react';
 
 function Food({ name }){
-  return <h1>I LIKE {name}</h1>
+  return <h1>I LIKE {name} </h1>
 }
 
 const foodILike = [
   {
-    name : "A" , image : "https://github.com/min6624/movie_app_2020s"
+    name : "A" , image : "https://unsplash.com/photos/SYIpxU6laA0"
   },
   {
     name : "B" , image : "https://github.com/min6624/movie_app_2020"  
@@ -19,19 +19,17 @@ const foodILike = [
 
 function renderFood(dish){
   console.log(dish)
-  return <Food name={dish.name} picture ={dish.image} />
+  return <Food name={dish.name} picture ={dish.image} />;
 
 }
 
 function App() {
   return (
-    <div>
-      <h1>hello</h1>      
-      {foodILike.map(renderFood)}
-      {/* {foodILike.map(dish => <Food name={dish.name} />)} */}
-      
-    </div>
-  )
+      <div>
+        {console.log(foodILike.map(renderFood))}
+        {foodILike.map(renderFood)}
+      </div>
+  );
 }
  
 export default App;
